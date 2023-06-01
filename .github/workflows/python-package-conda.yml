@@ -14,8 +14,8 @@ jobs:
         python-version: '3.10'
     - name: Add conda to system path
       run: |
-        echo "##[add-path]$CONDA\\Scripts"
-        echo "##[add-path]$CONDA"
+        echo "::add-path::$CONDA\\Scripts"
+        echo "::add-path::$CONDA"
     - name: Install dependencies
       run: |
         conda env update --file environment.yml --name base
@@ -28,4 +28,3 @@ jobs:
       run: |
         conda install pytest
         pytest
-
