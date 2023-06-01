@@ -23,6 +23,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests pandas matplotlib  # Прикладові пакети, можна додати ще
 
-    - name: Run tests
+    - name: Run test
       run: |
         pytest  
